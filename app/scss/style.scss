@@ -6,4 +6,86 @@
 
 
 
+.wrepper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    padding: 60px 0;
+}
+
+.menu__list{
+    display: flex;
+    padding:70px 0 ;
+}
+
+.menu__list-link{
+font-size: 18px;
+line-height: 1.3;
+letter-spacing: 0.01em;
+transition: all 0.4s;
+}
+
+.menu__list-item:not(:last-child){
+margin-right: 40px;
+}
+
+.menu__list-link--active{
+    color:$accent;
+}
+
+.active:hover{
+    color: $accent;
+}
+
+.usen-nav{
+    display: flex;
+    gap:35px;
+    padding: 70px 0;
+}
+
+.usen-nav__link{
+    position: relative;
+    display: inline-block;
+    width: 24px; /* Задайте ширину та висоту, відповідно до розміру іконки */
+    height: 24px;
+}
+
+.usen-nav__link::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.usen-nav__link-search::before {
+    background-image: url('../images/icons/Search-btn.svg');
+}
+
+.usen-nav__link-buy::before{
+    background-image: url('../images/icons/Cart_con.svg');
+}
+
+.usen-nav__num{
+    position: absolute;
+    background-color:$accent;
+    text-align: center;
+    border-radius:50%;
+    width: 14px;
+    height: 14px;
+    color:#fff;
+    font-size: 10px;
+    top: -4px;
+    right:-6px;
+}
+
+
+
+
 @import 'media';
